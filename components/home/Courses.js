@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide , pagination } from "swiper/react";
 import styles from './home.module.css';
@@ -5,6 +6,7 @@ import styles from './home.module.css';
 
 
 const Courses = ({ t }) => {
+    const { locale } = useRouter();
 
     return (
         <div className="py-12">
@@ -77,8 +79,12 @@ const Courses = ({ t }) => {
                                         </div>
                                     </div>
                                     <div className="w-full border rounded-bl-lg rounded-br-lg">
-                                        <div className="sm:p-4 px-2 py-4 flex items-center justify-between gap-4 border-b">
-                                            <div className="flex-[0.8]">
+                                        <div className={`sm:p-4 px-2 py-4 flex items-center justify-between gap-4 border-b
+                                        ${locale === 'en' ? "flex-row" : "flex-row-reverse" }
+                                        `}>
+                                            <div className={`flex-[0.8] 
+                                            ${locale === "en" ? "text-left" : "text-right" }
+                                            `}>
                                                 <h6 className="text-base font-bold">
                                                     {t("course.title")}    
                                                 </h6>
@@ -112,7 +118,10 @@ const Courses = ({ t }) => {
                                                 <p className="text-[10px] text-grayText">Data Science</p>
                                             </div>
                                         </div>
-                                        <div className="py-6 sm:px-4 px-2 bg-gray-100 flex items-center justify-between rounded-bl-lg rounded-br-lg">
+                                        <div className={`py-6 sm:px-4 px-2 bg-gray-100 flex items-center justify-between rounded-bl-lg rounded-br-lg
+                                        ${locale === 'en' ? "flex-row" : "flex-row-reverse" }
+                                        `}
+                                        >
                                             <div>
                                                 <button className="btn-primary">
                                                 {t("course.enrollNow")}

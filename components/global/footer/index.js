@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 const Footer = ({ t }) => {
     const router = useRouter();
-
+    const { locale } = router;
     const isActivePath = path => {
         return router.pathname.split('/').includes(path);
     }
@@ -24,7 +24,9 @@ const Footer = ({ t }) => {
                             <img src="/svgs/whiteLogo.svg" alt="White Logo" />
                             <p>LOGO</p>
                         </div>
-                        <ul className='mt-20 text-pure font-semibold flex  sm:flex-nowrap flex-wrap items-center justify-between pb-8 sm:text-base text-sm'>
+                        <ul className={`mt-20 text-pure font-semibold flex  sm:flex-nowrap flex-wrap items-center justify-between pb-8 sm:text-base text-sm
+                        ${locale === 'en' ? "flex-row" : "flex-row-reverse" }
+                        `}>
                             <li className={`${router.pathname === '/' ? 'text-primary' : ''} hover:text-primary duration-200`}>
                                 <Link href='/'>
                                     {t("footer.home")}

@@ -2,27 +2,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
 import gsap from 'gsap';
+import { useRouter } from "next/router";
 
 
 const Hero = ({ t }) => {
-
+    const { locale } = useRouter();
 
     useEffect(() => {
         gsap.fromTo('.hero-left' ,
-        { x : "30%" , opacity : 0 } , { x : 0 , opacity : 1 , duration : 1 , delay : 0.5 })
-    }, [])
+        { x : `${locale === 'en' ? "30%" : "-30%" }` , opacity : 0 } , { x : 0 , opacity : 1 , duration : 1 , delay : 0.5 })
+    }, []);
+
+
     return (
         <div>
-            <div className='w-[95%] lg:w-[85%] h-full pb-12 md:pt-0 pt-20 mx-auto flex md:flex-row flex-col items-center justify-between gap-8'>
+            <div className={`w-[95%] lg:w-[85%] h-full pb-12 md:pt-0 pt-20 mx-auto flex  flex-col items-center justify-between gap-8
+            ${locale === 'en' ? "md:flex-row" : "md:flex-row-reverse"}
+            `}>
                 <div className='flex-1 flex flex-col relative'>
-                    <h1 className='lg:text-[56px] md:text-[45px] sm:text-[40px] text-[36px] font-bold leading-[1.3]'>{t("hero.weAre")}<span className='text-primary'> {t("hero.alArkkan")} </span> 
+                    <h1 className='lg:text-[56px] md:text-[45px] sm:text-[40px] text-[36px] font-bold leading-[1.3]'>{t("hero.weAre")} <span className='text-primary'> {t("hero.alArkkan")} </span> 
                      {t("hero.trainingCenter")}
                     </h1>
-                    <p className='text-grayText py-6'>{t("hero.p1")} <br /> {t("hero.p2")} </p>
-                    <Link href='/#contact' className='mt-2'>
-                        <button className='btn-primary'>{t("hero.getInTouch")}</button>
-                    </Link>
-                    <div className='flex items-center md:gap-20 sm:gap-12 gap-8 mt-20 text-center'>
+                    <p className={`text-grayText py-6 
+                        ${locale === "en" ? "text-left" : "text-right"}
+                    `}>
+                        {t("hero.p1")} <br /> {t("hero.p2")} 
+                    </p>
+                    <div className={`${locale === 'en' ? "text-left" : "text-right"}`}>
+                        <Link href='/#contact' className='mt-2'>
+                            <button className='btn-primary'>{t("hero.getInTouch")}</button>
+                        </Link>
+                    </div>
+                    <div className={`flex items-center md:gap-20 sm:gap-12 gap-8 mt-20 
+                    ${locale === 'en' ? "justify-start" : "justify-end"}
+                    `}>
                         <div>
                             <p className='text-3xl font-bold'>350+</p>
                             <span className='text-grayText text-sm'>{t("hero.exams")}</span>

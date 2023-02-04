@@ -6,21 +6,21 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 
-const navigationItems = [
-    { 
-        name : 'Home',
-        url : '/'
-    } ,
-    {
-        name : 'Contact',
-        url : '/contact'
-    }
-]
 
 const contact = () => {
     const { t } = useTranslation('home');
     const { locale } = useRouter();
-    
+
+    const navigationItems = [
+        { 
+            name : locale === 'en' ? 'Home' : "بيت",
+            url : '/'
+        } ,
+        {
+            name : locale === 'en' ? "Contact" : "اتصال" ,
+            url : '/contact'
+        }
+    ]
 
     return (
         <div>

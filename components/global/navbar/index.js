@@ -26,17 +26,11 @@ const Navbar = () => {
 
     const { push , locale , locales } = useRouter();
 
-    const handleLangChange = (e) => {
-
-        push("#" , undefined , {
-            locale : e.target.value
-        });
-    }
-     
-
     return (
         <div className='fixed top-0 left-0 w-full z-[99] sm:bg-pure bg-primary ' ref={headerRef}>
-            <div className='flex items-center justify-between lg:w-[85%] w-[97%] mx-auto py-4'>
+            <div className={`flex items-center justify-between lg:w-[85%] w-[97%] mx-auto py-4
+            ${locale === 'en' ? "flex-row" : "flex-row-reverse" }
+            `}>
                 <div className='flex items-center gap-6'>
                     <div onClick={() => setShowDrawer(true)} className='cursor-pointer w-fit' >
                         <img src="/svgs/menu.svg" alt="Hamburger" className={styles.hamburger} />
@@ -44,12 +38,6 @@ const Navbar = () => {
                     <div>
                         <LocaleSwitcher smHide/>
                     </div>
-                    {/* <select className='border font-semibold rounded-md px-4 text-base  py-[2px] outline-none translate-y-[1px] sm:block hidden'
-                    onChange={handleLangChange}
-                    >
-                        <option value="ar">العربيه</option>
-                        <option value="en">Eng</option>
-                    </select> */}
                 </div>
                 <Link href='/'>
                     <div className='translate-y-0.5 sm:block hidden'>
@@ -75,10 +63,7 @@ const Navbar = () => {
                     <Link href='/auth/login'>
                         <button className='btn-white nav'>Account</button>
                     </Link>
-                    
-                    
                 </div>
-                
             </div>
         </div>
     )

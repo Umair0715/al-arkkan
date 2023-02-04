@@ -8,22 +8,24 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 
-const navigationItems = [
-    { 
-        name : 'Home',
-        url : '/'
-    } ,
-    {
-        name : 'Facilities',
-        url : '/facilities'
-    }
-]
+
 
 const Facilities = () => {
     const [data , setData] = useState(facilitiesData)
     const [activeBranch , setActiveBranch] = useState(data[0]);
     const { t } = useTranslation('home');
     const { locale } = useRouter();
+
+    const navigationItems = [
+        { 
+            name : locale === 'en' ? 'Home' : "بيت",
+            url : '/'
+        } ,
+        {
+            name : locale === 'en' ? "Facilities" : "منشأتنا" ,
+            url : '/facilities'
+        }
+    ]
 
     const handleCityChange = e => {
         if(e.target.value === 'all') {
@@ -55,7 +57,9 @@ const Facilities = () => {
                     <SectionNavigator items={navigationItems} />
                 </div>
             </div>
-            <div className='lg:w-[80%] w-[95%] mx-auto flex md:flex-row flex-col gap-8 pb-20'>
+            <div className={`lg:w-[80%] w-[95%] mx-auto flex md:flex-row flex-col gap-8 pb-20
+            ${locale === 'en' ? "md:flex-row" : "md:flex-row-reverse"}
+            `}>
                 <div className='flex-1'>
                     <div className='flex items-center sm:gap-6 gap-3 justify-end sm:text-base text-sm'>
                         <div className='border py-2 sm:px-4 px-2 rounded-md flex items-center sm:gap-6 gap-3 font-semibold'>
@@ -104,7 +108,9 @@ const Facilities = () => {
                         data?.map(item => (
                             <div 
                             key={item?.id} 
-                            className={`${activeBranch?.id === item?.id ? 'bg-primary' : 'bg-lightBlue text-dark'} py-4 px-4 text-pure font-medium w-full rounded-md cursor-pointer`}
+                            className={`${activeBranch?.id === item?.id ? 'bg-primary' : 'bg-lightBlue text-dark'} py-4 px-4 text-pure font-medium w-full rounded-md cursor-pointer 
+                            ${locale === 'en' ? "text-left" : "text-right"}
+                            `}
                             onClick={() => setActiveBranch(item)}
                             >
                                 {item?.[`${locale}`].branchName}
@@ -117,20 +123,28 @@ const Facilities = () => {
                     <div>
                         <iframe src={activeBranch?.mapUrl} width="100%" height="300" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div className='border-l-4 border-primary pl-4 mt-8'>
-                        <div className='flex items-center gap-4'>
+                    <div className={` border-primary  mt-8
+                    ${locale === 'en' ? "border-l-4 pl-4" : "border-r-4 pr-4" }
+                    `}>
+                        <div className={`flex items-center gap-4
+                        ${locale === 'en' ? 'justify-start' : "justify-end"}
+                        `}>
                             <h6 className='text-xl font-bold'>
                                 {activeBranch[`${locale}`].branchName}
                             </h6>
-                            <div className='bg-lightBlue text-xs text-primary py-1 px-2 rounded-md'>{activeBranch.branchType}</div>
+                            
                         </div>
-                        <div className='my-4 flex items-center gap-2'>
+                        <div className={`my-4 flex items-center gap-2
+                        ${locale === 'en' ? "flex-row" : "flex-row-reverse" }
+                        `}>
                             <img src="/svgs/smMap.svg" alt="Map Svg" />
                             <p className='text-sm text-grayText'>
                                 {activeBranch[`${locale}`].branchAddress}
                             </p>
                         </div>
-                        <div className='flex items-center gap-2'>
+                        <div className={`my-4 flex items-center gap-2
+                        ${locale === 'en' ? "flex-row" : "flex-row-reverse" }
+                        `}>
                             <img src="/svgs/smPhone.svg" alt="Phone Svg" />
                             <p className='text-sm text-grayText'>
                                 {activeBranch.branchContact}

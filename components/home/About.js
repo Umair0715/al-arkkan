@@ -2,11 +2,13 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 gsap.registerPlugin(ScrollTrigger)
 
 
 const About = ({ t }) => {
     const aboutLeftRef = useRef(null);
+    const { locale } = useRouter();
 
     useEffect(() => {
         const el = aboutLeftRef.current;
@@ -20,11 +22,14 @@ const About = ({ t }) => {
     }, [])
 
     return (
-        <div className='flex md:flex-row flex-col-reverse justify-between gap-8 lg:w-[85%] w-[95%] mx-auto min-h-screen h-full sm:py-20 pt-8'>
+        <div className={`flex md:flex-row flex-col-reverse justify-between gap-8 lg:w-[85%] w-[95%] mx-auto min-h-screen h-full sm:py-20 pt-8
+        `}>
             <div className=' flex-[0.45] md:pt-0 pt-8 flex md:justify-start justify-center' ref={aboutLeftRef}>
                 <img src="/images/about.png" alt="" />
             </div>
-            <div className='flex-[0.55]'>
+            <div className={`flex-[0.55]
+            ${locale === 'en' ? "text-left" : "text-right"}
+            `}>
                 <div className='text-grayText'>
                     <h3 className='md:text-4xl text-3xl font-bold text-dark'>
                         {t("about.mainHeading")}
@@ -35,7 +40,9 @@ const About = ({ t }) => {
                     <p>{t("about.aboutSm")}</p>
                 </div>
                 <div className='mt-8 flex flex-col gap-8'>
-                    <div className='flex gap-2'>
+                    <div className={`flex gap-2
+                    ${locale === 'en' ? "flex-row" : "flex-row-reverse"}
+                    `}>
                         <div className='flex-[0.15]'>
                             <div className='bg-lightBlue flex items-center justify-center sm:w-[80px] w-[70px] sm:h-[80px] h-[70px] rounded-full'>
                                 <img src='/svgs/vision.svg' alt='Vision' />
@@ -50,7 +57,9 @@ const About = ({ t }) => {
                             </p>
                         </div>
                     </div>
-                    <div className='flex gap-2'>
+                    <div className={`flex gap-2
+                    ${locale === 'en' ? "flex-row" : "flex-row-reverse"}
+                    `}>
                         <div className='flex-[0.15]'>
                             <div className='bg-lightBlue flex items-center justify-center sm:w-[80px] w-[70px] sm:h-[80px] h-[70px] rounded-full'>
                                 <img src='/svgs/mission.svg' alt='Vision' />
@@ -63,7 +72,9 @@ const About = ({ t }) => {
                             <p className='mt-2 text-gray-800 sm:text-base text-sm'>
                                 {t("about.ourMissionP")}
                             </p>
-                            <div className='mt-8'>
+                            <div className={`mt-8 flex
+                            ${locale === 'en' ? "justify-start" : "justify-end"}
+                            `}>
                                 <Link href='/about' className="btn-secondary w-fit flex gap-2" style={{
                                     padding: '8px 1rem'
                                 }}>

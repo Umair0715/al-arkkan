@@ -8,7 +8,7 @@ import React from 'react'
 const Auth = () => {
     const router = useRouter();
     const { t }  = useTranslation('auth');
-
+    const { locale } = router;
 
     return (
         <div className='w-full pb-20 h-full '>
@@ -17,7 +17,9 @@ const Auth = () => {
                     <img src="/images/auth.png" alt="Auth" className='w-[80%]'/>
                 </div>
                 <div className='flex-1'>
-                    <div className='flex items-center gap-12'>
+                    <div className={`flex items-center gap-12
+                    ${locale === 'en' ? "justify-start" : "justify-end"}
+                    `}>
                         {
                             ['Login' , 'Register'].map((item , i) => (
                                 <div className={`font-semibold text-xl cursor-pointer

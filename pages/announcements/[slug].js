@@ -11,13 +11,14 @@ import { useRouter } from 'next/router';
 
 const AnnouncementsDetails = () => {
     const router = useRouter();
+    const { locale } = useRouter();
     const navigationItems = [
         { 
-            name : 'Home',
+            name : locale === 'en' ? 'Home' : "بيت",
             url : '/'
         } ,
         {
-            name : 'Announcements',
+            name : locale === 'en' ? "Announcements" : "الإعلانات" ,
             url : '/announcements'
         } ,
         {
@@ -46,24 +47,36 @@ const AnnouncementsDetails = () => {
                     className='w-full h-[300px] rounded-[30px] object-cover'
                     />
                 </div>
-                <div className='mt-8 border-l-4 border-primary pl-4'>
+                <div className={`mt-8  border-primary
+                ${locale === 'en' ? "border-l-4 pl-4 text-left" : "border-r-4 pr-4 text-right" }
+                `}>
                     <h3 className='text-2xl font-bold'>{router.query.slug}</h3>
                     <p className='text-sm text-grayText mt-6'>
                         {t("ann.date")}
                     </p>
                 </div>
-                <div className='flex lg:gap-20 gap-8 mt-12 md:flex-row flex-col'>
-                    <div className='flex-1 text-[15px]'>
+                <div className={`flex lg:gap-20 gap-8 mt-12  flex-col
+                ${locale === 'en' ? "md:flex-row " : "md:flex-row-reverse"}
+                `}>
+                    <div className={`flex-1 text-[15px]
+                    ${locale === 'en' ? "text-left" : "text-right"}
+                    `}>
                         <p>
                             {t("ann.descLg")}
                         </p>
                     </div>
-                    <div className='flex-1 flex md:items-end items-center md:justify-end '>
+                    <div className={`flex-1 flex md:items-end items-center md:justify-end 
+                    
+                    `}>
                         <div className='w-[400px] bg-lightBlue py-4 sm:px-4 px-2 rounded-lg'>
-                            <h6 className='text-lg font-bold'>
+                            <h6 className={`text-lg font-bold
+                            ${locale === 'en' ? 'text-left' : "text-right"}
+                            `}>
                                 {t("ann.otherAnnouncements")}
                             </h6>
-                            <div className='flex flex-col gap-3 mt-6'>
+                            <div className={`flex flex-col gap-3 mt-6 
+                            ${locale === 'en' ? 'text-left' : "text-right"}
+                            `}>
                                 {
                                     [...Array(3).keys()].map((item , i) => (
                                         <div key={i} className='flex gap-2'>
@@ -71,7 +84,7 @@ const AnnouncementsDetails = () => {
                                                 <img src="/images/iso.png" alt="ISO" className='rounded-[10px]'/>
                                             </div>
                                             <div className='flex-[0.65]'>
-                                                <Link href={`/announcements/Al Arkkan Training Center is an acknowledged`}>
+                                                <Link href={`/announcements/${locale === 'en' ? "Al Arkkan Training Center is an acknowledged" : "مركز أركان للتدريب معترف به"}`}>
                                                     <p className='font-semibold'>
                                                     {t("ann.otherTitle")}
                                                     </p>

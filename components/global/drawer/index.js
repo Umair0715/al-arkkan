@@ -17,10 +17,17 @@ const Drawer = () => {
         return router.pathname.split('/').includes(path);
     }
     useClickOutside(drawerRef , () => setShowDrawer(false));
-
+    console.log(showDrawer)
     return (
-        <div className={`z-[9999] ${styles.drawer} ${showDrawer ? styles.showDrawer : ''} `} ref={drawerRef} >
-            <div className='flex justify-between'>
+        <div className={`z-[9999] ${styles.drawer} 
+        ${locale === 'en' ? styles.drawerLeft : styles.drawerRight}
+        ${showDrawer ? styles.showDrawer : ''} 
+        `} 
+        ref={drawerRef} 
+        >
+            <div className={`flex justify-between
+            ${locale === 'en' ? "flex-row" : "flex-row-reverse"}
+            `}>
                 <div>
                     <Logo />
                 </div>
@@ -28,7 +35,9 @@ const Drawer = () => {
                     <img src='/svgs/cross.svg' alt='Cross' className='w-[20px]' />
                 </div>
             </div>
-            <ul className={styles.drawerList}>
+            <ul className={`${styles.drawerList} 
+            ${locale === 'en' ? "text-left" : "text-right"}
+            `}>
                 <li className={`${ router.pathname === '/' ? styles.active : ''}`}>
                     <Link href='/' onClick={() => setShowDrawer(false)}>
                         {locale === 'en' ? "Home" : "بيت"}

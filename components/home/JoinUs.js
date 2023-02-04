@@ -1,6 +1,9 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 
 const JoinUs = ({ t }) => {
+    const { locale } = useRouter();
+
     return (
         <div className='py-20 px-4 mt-[150px] relative'
             style={{
@@ -8,8 +11,12 @@ const JoinUs = ({ t }) => {
 
             }}
         >
-            <div className='md:w-[80%] mx-auto text-pure'>
-                <div className='lg:w-[50%] md:w-[60%] sm:w-[75%] w-[95%] flex flex-col gap-8'>
+            <div className={`md:w-[80%] mx-auto text-pure flex relative z-50
+                ${locale === 'en' ? "justify-start" : "justify-end"}
+            `}>
+                <div className={`lg:w-[50%] md:w-[60%] sm:w-[75%] w-[95%] flex flex-col gap-8 
+                ${locale === 'en' ? "text-left" : "text-right"}
+                `}>
                     <h3 className='text-3xl font-semibold'>
                         {t("join.mainHeading")}
                     </h3>

@@ -6,20 +6,21 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 
-const navigationItems = [
-    { 
-        name : 'Home',
-        url : '/'
-    } ,
-    {
-        name : 'Announcements',
-        url : '/announcements'
-    }
-]
 
 const Announcements = () => {
     const { locale } = useRouter();
     const { t } = useTranslation('announcements')
+
+    const navigationItems = [
+        { 
+            name : locale === 'en' ? 'Home' : "بيت",
+            url : '/'
+        } ,
+        {
+            name : locale === 'en' ? "Announcements" : "الإعلانات" ,
+            url : '/announcements'
+        }
+    ]
 
     return (
         <div className='pb-20'>
@@ -41,7 +42,9 @@ const Announcements = () => {
                                     <img src="/images/iso.png" alt="Iso" className='w-full h-auto rounded-tl-[20px]
                                     rounded-tr-[20px]' />    
                                 </div>  
-                                <div className='py-4 px-4 flex flex-col gap-4'>
+                                <div className={`py-4 px-4 flex flex-col gap-4 
+                                ${locale === 'en' ? "text-left" : "text-right"}
+                                `}>
                                     <h4 className='text-base font-bold'>
                                         {t("ann.title")}
                                     </h4>
@@ -51,8 +54,10 @@ const Announcements = () => {
                                     <p className='text-sm '>
                                         {t("ann.desc")}
                                     </p>
-                                    <Link href={`/announcements/Compliance with the ISO 9001 Standards`}>
-                                        <div className='flex items-end justify-end'>
+                                    <Link href={`/announcements/${locale === 'en' ? "Compliance with the ISO 9001 Standards" : "ISO 9001 الامتثال لمعايير "}`}>
+                                        <div className={`flex items-end 
+                                        ${locale === 'en' ? "justify-end" : "justify-start"}
+                                        `}>
                                             <button className="btn-secondary">
                                                 {t("ann.readMore")}
                                             </button>
@@ -65,7 +70,7 @@ const Announcements = () => {
                 </div>
 
                 <div className='flex items-center justify-center mt-20 '>
-                    <button className="btn-secondary">Load More</button>
+                    <button className="btn-secondary">{t("ann.loadMore")}</button>
                 </div>
             </div>
                         

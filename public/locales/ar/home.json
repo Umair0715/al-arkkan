@@ -28,7 +28,8 @@
         "viewMoe" : "عرض المزيد",
         "trainingCenterName" : "اسم مركز التدريب",
         "trainingCenterNameP" : "4965 طريق الأمير ماجد ، 8498 ، العزيزية ، جدة 23338 ، المملكة العربية السعودية", 
-        "viewMap" : "إعرض الخريطة"
+        "viewMap" : "إعرض الخريطة",
+        "viewMore" : "عرض المزيد"
     } ,
     "about" : {
         "mainHeading" : "عن الاركان" ,

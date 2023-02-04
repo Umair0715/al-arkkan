@@ -8,21 +8,22 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const navigationItems = [
-    { 
-        name : 'Home',
-        url : '/'
-    } ,
-    {
-        name : 'FAQs',
-        url : '/faq'
-    }
-]
 
 
 const Faqs = () => {
     const { t } = useTranslation('home');
     const { locale } = useRouter();
+
+    const navigationItems = [
+        { 
+            name : locale === 'en' ? 'Home' : "بيت",
+            url : '/'
+        } ,
+        {
+            name : locale === 'en' ? "FAQs" : "أسئلة وأجوبة" ,
+            url : '/faq'
+        }
+    ]
 
     return (
         <div>
