@@ -1,0 +1,23 @@
+.drawer {
+    @apply fixed top-0 -translate-x-[100%] ease-in-out duration-300 w-[300px] h-screen bg-pure p-6 z-50 ;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.showDrawer {
+    @apply translate-x-0;
+}
+.drawerList {
+    @apply mt-16 flex flex-col gap-8 font-medium  
+}
+.drawerList > li a{
+    @apply  duration-200 relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:bg-primary after:w-0 after:duration-200 after:h-[3px] ;
+}
+.drawerList > li {
+    @apply cursor-pointer;
+}
+.drawerList > li:hover a {
+    @apply after:w-full text-primary ;
+}
+.drawerList > li.active a {
+    @apply after:w-full text-primary ;
+}

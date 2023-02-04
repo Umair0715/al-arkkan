@@ -1,0 +1,19 @@
+.btn-primary {
+    @apply py-2 px-6 bg-primary text-pure rounded-tl-[22px] rounded-br-[22px] rounded-bl-[7px] rounded-tr-[7px] hover:bg-primaryHover;
+}
+.btn-secondary {
+    @apply py-2 px-6 border border-primary text-primary rounded-tl-[20px] rounded-br-[20px] rounded-bl-[7px] rounded-tr-[7px] duration-300 hover:border-black  ;
+}
+.btn-white {
+    @apply py-2 px-6 bg-pure text-primary rounded-tl-[22px] rounded-br-[22px] rounded-bl-[7px] border border-transparent duration-300 rounded-tr-[7px] hover:border-pure hover:bg-transparent hover:text-pure font-semibold;
+}
+
+@media (max-width: 638px){
+    .btn-white.nav {
+        @apply py-1.5 text-sm;
+    }
+}
+
+.lightShadow {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

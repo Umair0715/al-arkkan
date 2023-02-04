@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --primary : #046F6D;
+    --primaryHover : #015e5c;
+    --dark : #1F1F1F;
+    --pure : #fff;
+    --grayText : #A1A1A1;
+    --lightBlue : rgba(4, 111, 109, 0.06);
+}
+
+html , body{
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
+}
+
+.course-swiper{
+    position: relative !important;
+}
+.swiper-button-prev , .swiper-button-next{
+    position : absolute !important;
+    top : 90% !important;
+    opacity: 1 !important;
+    right : 10px !important;
+    z-index: 9999 !important;
+    border-radius: 50% !important;
+    background: var(--lightBlue) !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+    width: 40px !important;
+    height : 40px !important; 
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.swiper-button-prev{
+    left : 90% !important;
+}
+.swiper-button-prev:after , .swiper-button-next:after{
+    font-size: .9rem !important;
+    color : black;
+    font-weight: bold;
+}
+.swiper-button-next:after{
+    transform:  translateX(1px);
+}
+.swiper-button-prev:after {
+    transform: translateX(-1px);
+}
+.swiper-button-next-disabled , .swiper-button-prev-disabled{
+    color : var(--grayText) !important;
+    cursor : not-allowed !important;
+}
+/* .swiper-button-next:after , .swiper-button-prev:after {
+    position : absolute !important;
+    bottom: -300px  !important;
+    right : 0 !important;
+    color : black !important;
+    font-size: 1.2rem !important;
+} */
+
+@media (max-width: 1230px){
+    .swiper-button-prev{
+        left : 85% !important;
+    }
+}
+@media (max-width: 756px){
+    .swiper-button-prev{
+        left :80% !important;
+    }
+}
+@media (max-width: 556px){
+    .swiper-button-prev{
+        left :75% !important;
+    }
+}
+@media (max-width: 456px){
+    .swiper-button-prev{
+        left :70% !important;
+    }
+}
+@media (max-width: 380px){
+    .swiper-button-prev{
+        left :65% !important;
+    }
+}

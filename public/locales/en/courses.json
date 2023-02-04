@@ -1,0 +1,18 @@
+{
+    "course" : {
+        "mainHeading" : "Our Courses" ,
+        "subHeading" : "Provided by Al-Arkkan" ,
+        "intermediate" : "Intermediate" ,
+        "elKhobar" : "El Khobar" ,
+        "online" : "Online" ,
+        "lang" : "English/Arabic" ,
+        "title" : "Level 1&2 Award in Food ...",
+        "desc" : "The WordPress ope source,free software project is the communit...",
+        "hours" : "Hours" ,
+        "students" : "Students" ,
+        "session" : "Session",
+        "enrollNow" : "Enroll Now",
+        "viewMore" : "View More",
+        "month" : "Jan"
+    }
+}

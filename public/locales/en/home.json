@@ -1,0 +1,115 @@
+{
+    "hero": {
+        "weAre": "We Are" ,
+        "alArkkan": "Al Arkkan",
+        "trainingCenter": "Training Center" ,
+        "p1" : "Al Arkkan Training Center is a Saudi private training",
+        "p2" : "provider company was established in 2009.",
+        "getInTouch" : "Get In Touch",
+        "exams" : "Exams",
+        "corporate" : "Corporate",
+        "student" : "Student"
+    } ,
+    "services" : {
+        "whatWeDo" : "What We Do",
+        "heading" : "Services",
+        "subHeading" : "Advantages that make Al-arkan the best choice",
+        "trainingPrograms" : "Training Programs",
+        "trainingProgramsP" : "training for Food Safety, Health, Safety & Environment Health programs.",
+        "experiencedTrainers" : "Experienced Trainers",
+        "experiencedTrainersP" : "experienced trainers provide these services to a large number of organizations, both private and public" ,
+        "accreditation" : "Accreditation" ,
+        "accreditationP" : "The center is accredited by: Ministry of Municipal and Rural Affairs KSA and others"
+    } ,
+    "facilities" : {
+        "mainHeading" : "Our Facilities" ,
+        "p" : "Here you’ll find Al-Arkkans facilities such as training and exam centres as well as facilities that work with us to provide you with the best of service",
+        "viewMore" : "View More",
+        "trainingCenterName" : "Training Center Name",
+        "trainingCenterNameP" : "4965 Prince Majid Rd, 8498, Aziziyah, Jeddah 23338, Saudi Arabia", 
+        "viewMap" : "View Map"
+    } ,
+    "about" : {
+        "mainHeading" : "About Al-Arkkan" ,
+        "knowMore" : "Know more about Al Arkkan" ,
+        "aboutLg" : "Al Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs. Our experienced multilingual instructors provide our services to many organizations – both private and public – offering our solutions related to training services. Al Arkkan started operations in 2009 with exclusivity in Dammam, Jeddah and Makkah and wereceived several international accreditations such as Chartered Institute of Environmental Health (CIEH), ISO 9001 and IAS 17024." ,
+        "aboutSm" : "Al Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "li1" : "Saudi Arabia's first training company specialized in health and environmental educational programs for those workingin restaurants, supermarkets, beauty salons, barbershops, and laundries, and more.",
+        "li2" : "Applyingmodern training methodologies in high-quality classrooms",
+        "li3" : "Providing an enterprise web platform and mobile application to access online trainingand material, with full student management services",
+        "li4" : "Our qualifications are assured by The Ministry of Municipal and Rural Affairs and Technical and Vocational Training Cooperation, KSA. Training is delivered in Arabic, English, Hindi, Indonesian, Turkish, Tagalog, Malayalam and Urdu, and more" ,
+        "ourVision" : "Our Vision",
+        "ourVisionP" : "At Al-Arkkan, we aim to become the best in the region in providing training in the field of environmental health to help individuals, companies, and governments to achieve their goals and ensure the quality of targeted industries.",
+        "ourMission" : "Our Mission" ,
+        "ourMissionP" : "To deliver high-quality training and student management services to further advance the regions health education level in accordance with local regulation and best practices." ,
+        "theApproach" : "The Approach" ,
+        "theApproachP" : "We specialize in the field of environmental health education and awareness and implement its mission to prepare and qualify workers in food industry and public health establishments, as well as conduct examinations for them and aid in their certification in accordance with the Ministry of Municipal and Rural Affairs. We combine theoretical and practical training in a scientific manner to ensure the quality of our services and ensure our students meet the required level of awareness to become certified through our examination process",
+        "viewMore" : "View More"
+    } , 
+    "join" : {
+        "mainHeading" : "Join Al Arkkan" ,
+        "p" : "Al Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "registerNow" : "Register Now"
+    } , 
+    "announcements" : {
+        "mainHeading" : "Announcements",
+        "subHeading" : "provided by Al-Arkkan" ,
+        "li1" : "Compliance with the ISO 9001 Standards." ,
+        "li2" : "An obligation to comply with applicable laws and regulations where we operate" ,
+        "li3" : "Compliance with the accepted and applicable codes of good practice." ,
+        "li4" : "Good communication with clients and involved third parties." ,
+        "li5" : "Use an effective management system which serves as the framework for the settings of goals." ,
+        "li6" : "Compliance with the accepted and applicable codes of good practice." ,
+        "viewMore" : "View More"
+    } , 
+    "faq" : {
+        "mainHeading" : "FAQs" ,
+        "subHeading" : "any Questions ?.. we got you" ,
+        "q1" : "What is Al-Arkkan?" ,
+        "ans1" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q2" : "What type of training do you provide?" ,
+        "ans2" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q3" : "Can I take health education training even if I don’t work in any of the mentioned fields?" ,
+        "ans3" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q4" : "I am an individual, how can I register for health training?",
+        "ans4" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q5" : "I am a corporation/corporate representative, how can I register my employees for health training?" ,
+        "ans5" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q6" : "Do I have to visit the branch to book my training sessions?" ,
+        "ans6" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q7" : "What payment methods do you provide?" ,
+        "ans7" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q8" : "What languages do you provide training in?" ,
+        "ans8" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q9" : "What is the training and examination process?" ,
+        "ans9" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q10" : "Are there online training options?" ,
+        "ans10" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q11" : "What is the process in case of failure?" ,
+        "ans11" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "q12" : "I booked my sessions and want to reschedule, what do I do?" ,
+        "ans12" : "Al-Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "rightAns" : "If you didn't find the right answer" ,
+        "contactUs" : "Contact Us"
+    } ,
+    "contact" : {
+        "callUs" : "Call Us",
+        "e-mail" : "E-mail",
+        "address" : "Address",
+        "getInTouch" : "Get In Touch",
+        "name" : "Name",
+        "email" : "Email",
+        "company" : "Company",
+        "additionalContent" : "Additional Content" ,
+        "submit" : "Submit"
+    } , 
+    "footer" : {
+        "home" : "Home",
+        "services" : "Services" ,
+        "aboutUs" : "About Us" ,
+        "ourFacilities" : "Our Facilities",
+        "faqs" : "FAQs" ,
+        "siteMap" : "Site Map"
+    }
+    
+}

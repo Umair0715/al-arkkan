@@ -1,0 +1,33 @@
+{
+    "about" : {
+        "mainHeading" : "About Al-Arkkan" ,
+        "knowMore" : "Know more about Al Arkkan" ,
+        "aboutLg" : "Al Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs. Our experienced multilingual instructors provide our services to many organizations – both private and public – offering our solutions related to training services. Al Arkkan started operations in 2009 with exclusivity in Dammam, Jeddah and Makkah and wereceived several international accreditations such as Chartered Institute of Environmental Health (CIEH), ISO 9001 and IAS 17024." ,
+        "aboutSm" : "Al Arkkan Training Center is an acknowledged market leader in the field of training for Food Safety, Health, Safety, & Environment Health programs." ,
+        "li1" : "Saudi Arabia's first training company specialized in health and environmental educational programs for those workingin restaurants, supermarkets, beauty salons, barbershops, and laundries, and more.",
+        "li2" : "Applyingmodern training methodologies in high-quality classrooms",
+        "li3" : "Providing an enterprise web platform and mobile application to access online trainingand material, with full student management services",
+        "li4" : "Our qualifications are assured by The Ministry of Municipal and Rural Affairs and Technical and Vocational Training Cooperation, KSA. Training is delivered in Arabic, English, Hindi, Indonesian, Turkish, Tagalog, Malayalam and Urdu, and more" ,
+        "ourVision" : "Our Vision",
+        "ourVisionP" : "At Al-Arkkan, we aim to become the best in the region in providing training in the field of environmental health to help individuals, companies, and governments to achieve their goals and ensure the quality of targeted industries.",
+        "ourMission" : "Our Mission" ,
+        "ourMissionP" : "To deliver high-quality training and student management services to further advance the regions health education level in accordance with local regulation and best practices." ,
+        "theApproach" : "The Approach" ,
+        "theApproachP" : "We specialize in the field of environmental health education and awareness and implement its mission to prepare and qualify workers in food industry and public health establishments, as well as conduct examinations for them and aid in their certification in accordance with the Ministry of Municipal and Rural Affairs. We combine theoretical and practical training in a scientific manner to ensure the quality of our services and ensure our students meet the required level of awareness to become certified through our examination process",
+        "viewMore" : "View More" , 
+        "prod&Serv" : {
+            "mainHeading" : "Product & Services :" ,
+            "li1" : "Level 1, 2 in Hygiene and Safety Requirements for Workers in Beauty Salons" ,
+            "li2" : "Level 1, 2 in Hygiene and Safety Requirements for Workers in Laundries" , 
+            "li3" : "Level 1 in Food Safety and Health and Safety in The Workplace" ,
+            "li4" : "Level 2 in Food Safety for Workers in Food Businesses"
+        } , 
+        "cieh" : {
+            "mainHeading" : "CIEH Accredited Courses:" ,
+            "li1" : "Level 1, 2 in Hygiene and Safety Requirements for Workers in Beauty Salons" ,
+            "li2" : "Level 1, 2 in Hygiene and Safety Requirements for Workers in Laundries" , 
+            "li3" : "Level 1 in Food Safety and Health and Safety in The Workplace" ,
+            "li4" : "Level 2 in Food Safety for Workers in Food Businesses"
+        }
+    } 
+}
